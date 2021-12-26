@@ -11,6 +11,12 @@
 
 # git
 
+  ## gpush (no branch specified)
+  ### git push origin
+
+  ## gpull rno branch specified)
+  ### git pull origin
+
   ## gac
   ### git add and commit
 
