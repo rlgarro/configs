@@ -13,5 +13,5 @@
   * **gac**:     git add and commit, no message.
   * **gstatus**: get branch status.
   * **gbranches**: show branches.
-  * **gtree**: git tree decorated.
   * **gremotes**: show remote links.
+  * **gtree**: git tree decorated.
