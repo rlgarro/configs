@@ -1,33 +1,17 @@
-# cds
 
- ## dws
- ### cds to ~/downloads
 
- ## docs
- ### cds to ~/docs
+# **cds**
 
- ## repos
- ### cds to ~/docs/mrepos
+  * **dws**: to ~/downloads
+  * **docs**: to ~/docs_**
+  * **repos**: to ~/docs/{repos_directory}**
 
-# git
+# **git**
 
-  ## gpush (no branch specified)
-  ### git push origin
-
-  ## gpull rno branch specified)
-  ### git pull origin
-
-  ## gac
-  ### git add and commit
-
-  ## gstatus
-  ### git status
-
-  ## gremotes
-  ### shows remote links
-
-  ## gbranches
-  ### shows branches
-
-  ## gtree
-  ### git tree decorated
+  * **gpush**:   push to origin, no branch.
+  * **gpull**:   pull to origin, no branch.
+  * **gac**:     git add and commit, no message.
+  * **gstatus**: get branch status.
+  * **gbranches**: show branches.
+  * **gtree**: git tree decorated.
+  * **gremotes**: show remote links.
