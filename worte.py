@@ -1,5 +1,8 @@
-import os
+import signal, sys
+from os.path import expanduser
 
+
+HOME= expanduser("~")
 
 worte_id_xml = "<aktuellerWorteId>{}</aktuellerWorteId>\n"
 
@@ -26,11 +29,16 @@ WORT_EINTRAG_FRAGE="Wort: "
 
 WEG_OPTION_NACHRICHT="\nSie haben verlassen ausgewählt, programm beendet."
 
-PATH = "/home/roman/worte.xml"
-file = open(PATH, "r")
 
 index=0
-linier=file.readlines()
+linier=[]
+
+PATH = "{}/worte".format(HOME)
+def datei_öffnen():
+    global file
+    if os.path.exists(PATH):
+        file = open(PATH, "r")
+
 
 def alle_linier_aktualisieren():
     global linier
@@ -53,8 +61,13 @@ def global_index_setzen():
     global linier
 
     # worte index setzen
-    line = linier[0]
-    index = int(line.split(">")[1].split("<")[0])
+    if len(linier) == 0:
+        index = 1
+        linier.append(worte_id_xml.format(index))
+
+    else:
+        line = linier[0]
+        index = int(line.split(">")[1].split("<")[0])
 
 
 
@@ -156,13 +169,28 @@ def neue_worteeintrag():
 
             neue_wort_schreiben()
 
+def signal_handler(sig, frame):
+    print('\nProgramm geendet')
+    sys.exit(0)
+
+def file_existiert():
+    global file
+    try:
+        file
+    except NameError:
+        return False
+
+    return True
+
 if __name__ == '__main__':
+    signal.signal(signal.SIGINT, signal_handler)
     global_index_setzen()
     original_index = index
     neue_worteeintrag()
     if original_index != index:
         xml_ids_aktualisieren()
         alle_linier_aktualisieren()
-    else:
+
+    elif file_existiert():
         file.close()
 
