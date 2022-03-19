@@ -1,0 +1,2 @@
+nid	mid	fields
+1642507361211	1642476645161	v: <font color="#ff0000">vernichten</font>: Vernichten sie!	Acabar con
