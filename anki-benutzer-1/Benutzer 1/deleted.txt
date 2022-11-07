@@ -1,6 +1,0 @@
-nid	mid	fields
-1642507361211	1642476645161	v: <font color="#ff0000">vernichten</font>: Vernichten sie!	Acabar con
-1645977024765	1642476645161		
-1646795012394	1642476645161	abhauen	escaparse, rajarse.
-1646795068306	1642476645161	abheben	sacar.
-1646824647074	1642476645161	abschaffen	abolir.
