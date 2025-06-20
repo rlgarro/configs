@@ -1,17 +1,11 @@
-set nu		" line number
-set rnu 	" relative number
-colorscheme molokai
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set number
+set rnu
+colorscheme darcula
 
 call plug#begin()
-
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
-
+    Plug 'doums/darcula'
 call plug#end()
-
-
-nmap <C-f> :Files<Enter>
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-l> :wincmd l<CR>
